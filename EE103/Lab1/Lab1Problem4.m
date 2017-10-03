@@ -4,26 +4,35 @@
 
 
 % Problem 4
+clear;
 
 t = linspace(0,1,11);
 xt = 4*cos(2*pi*t + 0.2) + 3*sin(pi^2 * t);
 
 % Find max value of xt
-max = 0;
-for n = 1:size(t)(2)
-  if xt(n) > max
-    max = xt(n);
-  endif
-endfor
+maximum = max(xt);
 
 % Find min value of xt
-min = Inf;
-for n = 1:size(t)(2)
-  if xt(n) < min
-    min = xt(n);
+minimum = min(xt);
+
+% Find average element values
+avg = mean(xt);
+
+% Find indices of elements with element values > 4
+indeces = 0;
+n = 1;
+for i = 1:size(t)(2)
+  if xt(i) > 4
+    indeces(n) = i;
+    n = n+1;
   endif
 endfor
 
+
+% Find
+
 disp(xt);
-disp(max);
-disp(min);
+disp(maximum);
+disp(minimum);
+disp(avg);
+disp(indeces);

@@ -3,12 +3,18 @@
 % Lab 2
 % Problem 2
 
+clear;
+
 t = [-10:0.1:15];
 xt = Piecewise(t);
 ta = t + 2;
 xta = Piecewise(ta);
 tb = t - 3;
 xtb = Piecewise(tb);
+tc = [10:-0.1:-15];
+xtc = Piecewise(tc);
+td = tc + 4;
+xtd = -2*Piecewise(td);
 
 figure();
 plot(t, xt);
@@ -19,6 +25,12 @@ plot(t, xta);
 
 subplot(2,2,2);
 plot(t, xtb);
+
+subplot(2,2,3);
+plot(t, xtc);
+
+subplot(2,2,4);
+plot(t, xtd);
 
 function [xt] = Piecewise (t)
   for ii = 1:length(t)

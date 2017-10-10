@@ -15,9 +15,18 @@ figure();
 
 subplot(3,1,1);
 plot(t1, gt1, 'k');
+title("g(t) with 0.1 resolution");
+ylabel("y axis units");
 
 subplot(3,1,2);
 plot(t2, gt2, 'b');
+title("g(t) with 0.01 resolution");
+ylabel("y axis units");
 
 subplot(3,1,3);
 plot(t3, gt3, 'r');
+title("g(t) with 0.001 resolution");
+ylabel("y axis units");
+xlabel("time units");
+
+T = .534 - .034     %T = 0.5

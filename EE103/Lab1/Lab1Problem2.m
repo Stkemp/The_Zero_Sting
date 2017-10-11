@@ -15,5 +15,3 @@ endfor
 % what is x(t) when f = 15Hz and t = 0.3s?
 disp("when f = 15Hz and t = 0.3s, x(t) = "), disp(x(2,4));
 
-
-% Problem 3

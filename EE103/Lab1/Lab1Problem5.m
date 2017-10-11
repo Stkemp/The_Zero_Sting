@@ -36,3 +36,9 @@ subplot(3,1,3);
 plot(t, s3, 'r');
 ylabel("y axis units");
 xlabel("time(time units)");
+
+function [s1,s2,s3] = SumOfSinusoids (t, f1, f2)
+  s1 = sin(2*pi*f1*t);
+  s2 = sin(2*pi*f2*t);
+  s3 = s1 + s2;
+endfunction

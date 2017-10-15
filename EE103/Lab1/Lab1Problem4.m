@@ -21,12 +21,12 @@ avg = mean(xt);
 % Find indices of elements with element values > 4
 indeces = 0;
 n = 1;
-for i = 1:size(t)(2)
+for i = 1:length(t)
   if xt(i) > 4
     indeces(n) = i;
     n = n+1;
-  endif
-endfor
+  end
+end
 
 
 % Find

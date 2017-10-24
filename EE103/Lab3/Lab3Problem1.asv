@@ -9,14 +9,15 @@ clear all;
 R = 2;
 C = 1;
 L = 0.5;
-syms y(t) x(t) a b;
-Dy(t) = diff(y,t);
+syms y(t) x(t);
 eqn = R*C*diff(y,t,2) + diff(y,t) + R/L*y == 0; 
-conditions = [y(0)==0, Dy(0)==1];
 
-ySol(t) = dsolve(eqn,conditions);
-h(t) = diff(ySol,t);
+ySol(t) = dsolve(eqn);
+DySol(t) = diff(ySol,t);
 
+eqn1 = ySol(0) == 0;
+eqn2 = DySol(0) == 1;
+[A,B] = equationsToMatrix([eqn1,eqn2], [c1,
 
 t_1 = [-5:0.01:5];
 y_t = ySol(t_1);

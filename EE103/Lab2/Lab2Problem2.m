@@ -20,17 +20,22 @@ figure();
 plot(t, xt);
 
 figure();
+
 subplot(2,2,1);
 plot(t, xta);
+title("x(t+2)");
 
 subplot(2,2,2);
 plot(t, xtb);
+title("x(t-3)");
 
 subplot(2,2,3);
 plot(t, xtc);
+title("x(-t)");
 
 subplot(2,2,4);
 plot(t, xtd);
+title("-2x(
 
 function [xt] = Piecewise (t)
   for ii = 1:length(t)

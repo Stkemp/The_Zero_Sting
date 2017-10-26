@@ -15,8 +15,10 @@ eqn = R*C*diff(y,t,2) + diff(y,t) + R/L*y == 0;
 conditions = [y(0)==0, Dy(0)==1];
 
 ySol(t) = dsolve(eqn,conditions);
-h(t) = diff(ySol,t);
+h = diff(ySol,t)
 
+h1 = @(t) (exp(-t/4).*cos((31^(1/2)*t)/4) - (31^(1/2)*exp(-t/4).*sin((31^(1/2)*t)/4))/31).*(t>=0);
+t_1 = -10:.1:30;
 
-t_1 = [-5:0.01:5];
-y_t = ySol(t_1);
+figure();
+plot (t_1,h1(t_1));

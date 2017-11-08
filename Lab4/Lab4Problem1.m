@@ -48,13 +48,22 @@ function [Ck] = Lab4Problem1 (x, t, Nk, p)
         xlabel("w");
         
         % plot 3 cycles of the signal 'x' and the reconstructed signal
+        intvl = [t(1) t(end)+2*T];
+        pxt = repmat(x,1,diff(intvl)/T);
+        pt = linspace(intvl(1),intvl(2),length(pxt));
+        
+        subplot(2,2,2);
+        plot(pt, pxt);
+        title("Original x(t)");
+        xlable("t");
+
         t_recon = linspace(t(1), t(end)+2*T, 3*length(t));
         x_recon = zeros(1,length(t_recon));
         for i = 1:length(k)
             x_recon = x_recon + Ck(i).*exp(1i*k(i)*w0*t_recon);
         end
         
-        subplot(2,2,2);
+        subplot(2,2,4);
         plot(t_recon, x_recon);
         title("Reconstructed x(t)");
         xlabel("t");

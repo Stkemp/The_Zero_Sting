@@ -11,9 +11,7 @@ t = linspace(-5,5);
 xt = x(t);
 % generate 3 periods of function for interval -5<t<25
 % sourced from https://www.mathworks.com/matlabcentral/answers/163582-how-to-plot-a-piecewise-periodic-function-please-help
-intvl = [-5 25];
-pxt = repmat(x(t),1,diff(intvl)/10);
-pt = linspace(intvl(1),intvl(2),length(pxt));
+
 
 Ck = Lab4Problem1(xt,t,51,1);
 

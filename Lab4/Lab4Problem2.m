@@ -9,7 +9,5 @@ close all;
 x = @(t) 0.6*((t>=-2) - (cos(pi*t)+1).*((t>=-1) - (t>=1)) - (t>=2));
 t = linspace(-5,5);
 xt = x(t);
-% sourced from https://www.mathworks.com/matlabcentral/answers/163582-how-to-plot-a-piecewise-periodic-function-please-help
-
 
 Ck = Lab4Problem1(xt,t,51,1);

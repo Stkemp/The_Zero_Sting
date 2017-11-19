@@ -9,7 +9,7 @@ close all;
 
 w = [-31.4:0.1:31.4];
 t = [-100:0.1:100];
-G = @(w) 2*(w >= 5 & w <= 10);
+G = @(w) 2*(abs(w) >= 5 & abs(w) <= 10);
 Gw = G(w);
 
 % inverse fourier transform
